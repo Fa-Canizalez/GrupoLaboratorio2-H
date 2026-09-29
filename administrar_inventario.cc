@@ -29,8 +29,7 @@ void MostrarLista();
 
 
 //Somos el grupo que trabajo mal , y hicimos el commit tarde porque no me dejaron subirlo antes 
-
-int main()
+int main ()
 {
     Producto producto;
 
