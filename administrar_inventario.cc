@@ -30,6 +30,26 @@ int main ()
     return 0;
 }
 
+
+void BorrarInicio(Producto producto)
+{
+    if (inicio == nullptr)
+    {
+        std::cout << "Inventario vacio. No se encontraron productos para eliminar.\n";
+        return;
+    }
+
+    Nodo *actual = inicio;
+    inicio = (inicio)->siguiente;
+
+    if (inicio != nullptr)
+    {
+        (inicio)->anterior = nullptr;
+    }
+
+    delete actual;
+}
+
 Producto SolicitarDatos()
 {
     Producto nuevo;
