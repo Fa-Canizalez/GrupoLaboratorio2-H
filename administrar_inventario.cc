@@ -27,27 +27,51 @@ void BorrarInicio();
 Producto SolicitarDatos();
 void MostrarLista();
 
+
+//Somos el grupo que trabajo mal , y hicimos el commit tarde porque no me dejaron subirlo antes 
+
 int main()
 {
     Producto producto;
 
-  
-    producto = SolicitarDatos();
+    int opcion;
 
-   
-    InsertarInicio(producto);
+    do
+    {
+        std::cout<< "==INVENTARIO==" << std::endl;
+        std::cout << "1. Agregar producto" << std::endl;
+        std::cout << "2. Eliminar producto" << std::endl;
+        std::cout << "3. Mostrar inventario" << std::endl;
+        std::cout << "4. Salir" << std::endl;
+        std::cout <<"Por favor, ingrese una opcion";
+        std::cin >> opcion;
 
-  
-    std::cout << "\n--- Inventario ---\n";
-    MostrarLista();
+        switch (opcion)
+        {
+        case 1:
+                SolicitarDatos;
+                InsertarInicio(producto);
+            break;
+        case 2:
+                BorrarInicio();
+            break;
+        case 3:
+                MostrarLista();    
+            break;
+        case 4:
+            std::cout << "Saliendo del programa" << std::endl;
+            return 0;
+            break;
+        
+        default:
 
-  
-    std::cout << "\n--- Borrando primer producto ---\n";
-    BorrarInicio();
+        std::cout << "Opcion invalida, por favor intentelo de nuevo" << std::endl;
+            break;
+        }
 
 
-    std::cout << "\n--- Inventario despues de borrar ---\n";
-    MostrarLista();
+    } while (opcion != 4);
+    
 
     return 0;
 }
